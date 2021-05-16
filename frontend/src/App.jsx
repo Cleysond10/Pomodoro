@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Box from "@material-ui/core/Box";
-import Button from "./components/Button/Button";
+// import Button from "./components/Button/Button";
 
 function App() {
   const [time, setTime] = useState(25);
@@ -17,10 +17,10 @@ function App() {
   return (
     <Box border={1} p={20}>
       <p>WELCOME TO YOUR POMODORO APP!</p>
-      <Button type="button" onClick={timer()}>
+      <button type="submit" onClick={timer}>
         {" "}
         INICIAR POMODORO{" "}
-      </Button>
+      </button>
       <h1> {`Tempo Restante: ${time}`} </h1>
     </Box>
   );
