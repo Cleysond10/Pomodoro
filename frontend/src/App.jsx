@@ -1,20 +1,25 @@
-import Button from "./components/Button";
+import { Container } from "@material-ui/core";
+import Button from "./components/Button/Button";
 
 function App() {
-  const cronometro = () => {
-    setInterval(document.getElementById("counter"), 1500000);
+  const timeout = 1500000;
+
+  const timer = () => {
+    for (let time = timeout; time > 0; time--) {
+      console.log(time);
+    }
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>WELCOME TO YOUR POMODORO APP!</p>
-        <Button onClick={cronometro()} />
-        <div>
-          <h1 id="counter"></h1>
-        </div>
-      </header>
-    </div>
+    <Container>
+      <div className="App">
+        <header className="App-header">
+          <p>WELCOME TO YOUR POMODORO APP!</p>
+          <Button onClick={timer} />
+          <div id="counter"></div>
+        </header>
+      </div>
+    </Container>
   );
 }
 
