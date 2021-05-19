@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Box from "@material-ui/core/Box";
 
-function App() {
+function Camera() {
   const [source, setSource] = useState("");
   const handleCapture = (target) => {
     if (target.files) {
@@ -31,4 +31,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Camera;
