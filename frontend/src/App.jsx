@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Box from "@material-ui/core/Box";
+import Camera from "./components/Camera/index";
 // import Button from "./components/Button/Button";
 
 function App() {
@@ -7,22 +8,31 @@ function App() {
 
   const timer = () => {
     if (time > 0) {
-      setTimeout(() => {
-        setTime(time - 1);
-      }, 1000);
+      timeout();
     }
     console.log(time);
   };
 
+  const timeout = () => {
+    setTimeout(() => {
+      setTime(time - 1);
+    }, 1000);
+  };
+
   return (
-    <Box border={1} p={20}>
-      <p>WELCOME TO YOUR POMODORO APP!</p>
-      <button type="submit" onClick={timer}>
-        {" "}
-        INICIAR POMODORO{" "}
-      </button>
-      <h1> {`Tempo Restante: ${time}`} </h1>
-    </Box>
+    <div>
+      <Box border={1} p={20}>
+        <p>WELCOME TO YOUR POMODORO APP!</p>
+        <button type="submit" onClick={timer}>
+          {" "}
+          INICIAR POMODORO{" "}
+        </button>
+        <h1> {`Tempo Restante: ${time}`} </h1>
+      </Box>
+      <Box border={1} p={20}>
+        <Camera></Camera>
+      </Box>
+    </div>
   );
 }
 
