@@ -19,7 +19,7 @@ export default function Timer() {
   return (
     <div>
       <p>WELCOME TO YOUR POMODORO APP!</p>
-      <button type="submit" testId="button_test" onClick={timer}>
+      <button type="submit" data-testid="button_test" onClick={timer}>
         {" "}
         INICIAR POMODORO{" "}
       </button>
