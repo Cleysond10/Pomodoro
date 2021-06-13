@@ -6,8 +6,8 @@ describe("test App home page", () => {
   it("Verify button content", () => {
     render(<Button />);
 
-    const button = screen.getByTestId("button");
+    const button = screen.getByTestId("button").hasAttribute("type");
 
-    expect(button).not.toBeDisabled();
+    expect(button).toBeTruthy();
   });
 });
