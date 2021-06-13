@@ -8,7 +8,6 @@ describe("test App home page", () => {
 
     const buttonMock = screen.getByTestId("button_test").textContent;
 
-    // expect(buttonMock).toHaveTextContent("Iniciar Pomodoro");
     expect(buttonMock).toContain(" INICIAR POMODORO ");
   });
 });
