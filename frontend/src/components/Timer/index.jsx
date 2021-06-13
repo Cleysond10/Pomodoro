@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Button from "./components/Button/Button";
 
 export default function Timer() {
   const [time, setTime] = useState(25);
