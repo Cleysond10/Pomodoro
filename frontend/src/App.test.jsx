@@ -1,12 +1,14 @@
-import { render } from "react-dom";
-import Button from "./components/Button";
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import Button from "./components/Timer";
 
 describe("test App home page", () => {
   it("Verify button content", () => {
-    const { getByTestId } = render(<Button />);
+    render(<Button />);
 
-    const button = getByTestId("button");
+    const buttonMock = screen.getByTestId("button_test").textContent;
 
-    expect(button).toHaveTextContent("Iniciar Pomodoro");
+    // expect(buttonMock).toHaveTextContent("Iniciar Pomodoro");
+    expect(buttonMock).toContain(" INICIAR POMODORO ");
   });
 });
