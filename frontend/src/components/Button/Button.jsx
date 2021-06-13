@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 
 export default function index({ children, ...otherProps }) {
   return (
-    <Button type="button" color="secondary">
+    <Button type="button" data-testid="button" color="secondary">
       {children}
     </Button>
   );
