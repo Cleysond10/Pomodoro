@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 
-describe("test App home page", () => {
+describe("test Button component", () => {
   it("Verify button content", () => {
     render(<Button />);
 

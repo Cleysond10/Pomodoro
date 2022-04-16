@@ -11,23 +11,6 @@ export default function Timer() {
       }
     }, 1000);
   }
-
-  // useEffect(() => {
-  //   handleTime();
-  // }, [time]);
-
-  // const handleTime = () => {
-  //   if (time > 0) {
-  //     onTimeout();
-  //   }
-  //   console.log(time);
-  // };
-
-  // const onTimeout = () => {
-  //   setTimeout(() => {
-  //     setTime(time - 1);
-  //   }, 1000);
-  // };
   
   return (
     <div>
